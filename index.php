@@ -290,6 +290,6 @@
                     </div>
                 </div>
             </div>
-        </div>
+</div>
         <!-- Gallery Area End -->
-    </main>
+</main>

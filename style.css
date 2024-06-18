@@ -1,0 +1,135 @@
+/* all body font */
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa:wght@300..700&display=swap');
+/* avijit font */
+@import url('https://fonts.googleapis.com/css2?family=Jaini+Purva&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: "Comfortaa", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+/* nav starts */
+#nav-name{
+    font-family: "Jaini Purva", system-ui;
+    font-weight: 900;
+    font-size: 30px;
+    font-style: normal;
+}
+.navbar {
+  width: 100%;
+  margin-top: 10px;
+  padding: 5px 20px; /* Adjust padding as needed */
+  border-top: 2px solid #116466;
+  border-bottom: 2px solid #116466;
+}
+.navbar-brand {
+  font-weight: bold;
+  padding-left: 15px; /* Added padding to separate from edge */
+}
+.navbar-toggler {
+  padding-right: 15px; /* Added padding to separate from edge */
+}
+.navbar-nav {
+  margin-left: auto;
+}
+.nav-link {
+  position: relative;
+  display: inline-block;
+  padding: 10px 15px;
+  transition: color 0.3s ease-in-out;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #000;
+  transition: width 0.3s ease-in-out;
+}
+.nav-link:hover::after {
+  width: 100%;
+}
+#login-btn,
+#hireme-btn {
+  color: #a81d1d;
+  transition: background-color 0.3s, border-color 0.3s;
+  position: relative;
+  overflow: hidden; /* Added to contain pseudo-element effects */
+}
+#login-btn span,
+#hireme-btn span {
+  display: inline-block; /* Added to prevent shifting */
+}
+#login-btn::before,
+#hireme-btn::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  opacity: 0;
+  transition: all 0.3s;
+  border-top-width: 1px;
+  border-bottom-width: 1px;
+  border-top-style: solid;
+  border-bottom-style: solid;
+  border-top-color: rgba(195, 52, 52, 0.5);
+  border-bottom-color: rgba(255, 23, 23, 0.5);
+  transform: scale(0.1, 1);
+}
+#login-btn:hover::before,
+#hireme-btn:hover::before {
+  opacity: 1; 
+  transform: scale(1, 1); 
+}
+#login-btn::after,
+#hireme-btn::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.3s;
+  background-color: rgba(153, 31, 31, 0.1);
+}
+#login-btn:hover::after,
+#hireme-btn:hover::after {
+  opacity: 0; 
+  transform: scale(0.1, 1);
+}
+@media (max-width: 992px) {
+  .navbar-nav {
+    text-align: left; /* Ensure left alignment on smaller screens */
+  } 
+}
+/* nav end */
+
+/* body hero starts */
+.hero-section {
+    background-image: url('https://images.unsplash.com/photo-1488554378835-f7acf46e6c98?q=80&w=1471&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: cover; /* Background image will cover the entire container */
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh; /* Set height to viewport height to ensure it covers the entire screen */
+    color: #fff;
+    padding: 100px 0; /* Adjust padding as needed */
+  }
+  
+  
+  .hero-heading {
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  .hero-description {
+    font-size: 1.5rem;
+    line-height: 1.6;
+  }
